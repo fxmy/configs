@@ -113,7 +113,8 @@ let g:ycm_semantic_triggers = {
 
 " Rust
 let g:syntastic_rust_checkers = ['rustc']
-let g:syntastic_elm_checkers = ['elm-make']
+" elm
+let g:syntastic_elm_checkers = ['elm_make']
 
 " Syntastic
 
