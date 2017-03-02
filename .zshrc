@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump chucknorris command-not-found common-aliases debian gem gitfast git-extras git-flow git_remote_branch python tmux sudo)
+plugins=(git autojump chucknorris command-not-found common-aliases debian gem gitfast git-extras git-flow git_remote_branch python tmux sudo zsh-syntax-highlighting)
 
 # User configuration
 
