@@ -127,5 +127,6 @@ let g:elm_syntastic_show_warnings = 1
 " tagbar
 let g:tagbar_sort = 0
 nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <silent> <F10> :SyntasticToggleMode<CR>
 
 colorscheme koehler
