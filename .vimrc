@@ -39,6 +39,7 @@ Plugin 'vim-erlang/vim-erlang-omnicomplete'
 
 Plugin 'vim-scripts/Tagbar'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'vim-scripts/Mark--Karkat'
 Plugin 'Highlight-UnMatched-Brackets'
 
@@ -51,6 +52,11 @@ Plugin 'rust-lang/rust.vim'
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
 
+" for Haskell
+Plugin 'neovimhaskell/haskell-vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'Shougo/vimproc.vim'
 
 "color-colored
 "Plugin 'jeaye/color_coded'
@@ -98,6 +104,7 @@ noremap <C-L> <C-W>l<CR>
 
 set list
 set listchars=tab:>-,trail:-
+set wildmenu
 
 "http://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
@@ -109,10 +116,12 @@ autocmd FilterWritePre * if &diff | setlocal wrap< | endif
 let g:elm_setup_keybindings = 0
 let g:ycm_semantic_triggers = {
      \ 'elm' : ['.'],
+     \ 'haskell' : ['.', '(', ' '],
      \}
 
 " Rust
-let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_rust_checkers = ['cargo']
+"let g:syntastic_rust_checkers = ['rustc']
 " elm
 let g:syntastic_elm_checkers = ['elm_make']
 
@@ -123,6 +132,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:elm_syntastic_show_warnings = 1
+
+" Haskell
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " tagbar
 let g:tagbar_sort = 0
